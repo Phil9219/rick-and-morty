@@ -1,6 +1,9 @@
 .header {
   height: 64px;
   display: flex;
+  background: transparent;
+  display: flex;
+  justify-content: center;
 }
 
 .header > img {

@@ -1,6 +1,6 @@
 .character {
   border: 1px solid black;
-  border-radius: 10px;
+  border-radius: 30px;
   background: var(--card-bg-color);
   display: flex;
   flex-direction: column;
@@ -18,5 +18,4 @@
   font-size: 1.3rem;
   margin: 10px;
   color: whitesmoke;
-  font-family: var(---font-family);
 }

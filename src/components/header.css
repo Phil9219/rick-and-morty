@@ -1,5 +1,5 @@
 .header {
-  height: 64px;
+  height: 350px;
   display: flex;
   background: transparent;
   display: flex;
@@ -7,5 +7,17 @@
 }
 
 .header > img {
-  height: 50px;
+  height: 350px;
+}
+
+.searchbar {
+  background-color: #3c3e44;
+  color: #eee;
+  border: 2px solid green;
+  border-radius: 10px;
+  display: flex;
+  text-align: center;
+  align-items: center;
+  font-family: var(--font-family);
+  font-size: 20px;
 }

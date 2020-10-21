@@ -9,21 +9,26 @@ function App() {
 
   const main = createElement("main");
 
-  async function getCharacters() {
-    const firstCharacter = await getCharacterById(1);
-    const secondCharacter = await getCharacterById(2);
-    main.append(
-      Character({
-        name: firstCharacter.name,
-        imgSrc: firstCharacter.image,
-      }),
-      Character({
-        name: secondCharacter.name,
-        imgSrc: secondCharacter.image,
-      })
-    );
+  function CharacterList(i) {
+    let n = 1;
+    while (n <= i) {
+      getCharacters();
+      n++;
+    }
+
+    async function getCharacters() {
+      const NameCharacter = await getCharacterById(n);
+
+      main.append(
+        Character({
+          name: NameCharacter.name,
+          imgSrc: NameCharacter.image,
+        })
+      );
+    }
   }
-  getCharacters();
+  CharacterList(15);
+
   const container = createElement("div", { children: [header, main] });
 
   return container;

@@ -2,6 +2,7 @@ import "./app.css";
 import Character from "./components/Character";
 import Characters from "./components/Characters";
 import Header from "./components/Header";
+import Search from "./components/Search";
 import { getCharacters } from "./utils/api";
 import { createElement } from "./utils/elements";
 
@@ -26,15 +27,16 @@ function App() {
     characterContainer.append(...characterElements);
   }
 
-  const searchbar = createElement("input", {
-    onchange: (event) => loadCharacters(event.target.value),
-    className: "searchbar",
+  // const searchbar = createElement("input", {
+  //   onchange: (event) => loadCharacters(event.target.value),
+  const search = Search({
+    onchange: (value) => loadCharacters(value),
   });
 
   loadCharacters();
 
   const container = createElement("div", {
-    children: [header, searchbar, main],
+    children: [header, search, main],
   });
 
   return container;

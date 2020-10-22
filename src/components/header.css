@@ -1,8 +1,11 @@
 .header {
-  height: 64px;
+  height: 350px;
   display: flex;
+  background: transparent;
+  display: flex;
+  justify-content: center;
 }
 
 .header > img {
-  height: 50px;
+  height: 350px;
 }

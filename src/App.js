@@ -41,6 +41,7 @@ function App() {
     nextPage = characters.info.next?.match(/\d+/)[0];
     loadMoreButton.disabled = !characters.info.next;
     lastName = name;
+    main.append(loadMoreButton);
   }
   // const searchbar = createElement("input", {
   //   onchange: (event) => loadCharacters(event.target.value),
